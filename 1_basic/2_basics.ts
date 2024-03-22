@@ -20,7 +20,7 @@ const undefinedVar: undefined = undefined;
  * TS 에서만 존재하는 타입
  * Any, never, 
  */
-
+// 일자로 정렬되는것을 프리미티브 타입이라고 함
 let anyVar: any;
 anyVar = 100;
 anyVar = '코드팩토리';
