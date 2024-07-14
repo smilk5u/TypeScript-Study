@@ -1,7 +1,5 @@
 /**
- * Union Basics
- * 
- * 유니언 TS 에서 타입을 병한 할 수 있는 수많은 방법 중 하나이다.
+ * Union Basics - 유니언 TS 에서 타입을 병합 할 수 있는 수많은 방법 중 하나이다.
  */
 
 type StringOrBooleanType = string | boolean;
@@ -22,7 +20,7 @@ state = 'LOADING';
  * 리스트의 유니언
  */
 // string으로 구성된 리스트 또는 boolean 으로 구성된 리스트
-type StringListOrBooleanList = string[] | boolean[];
+type StringListOrBooleanList = string[] | boolean[]; // 독립된 타입을 나눠줘야한다.
 
 let strListOrBooleanList: StringListOrBooleanList = [
   '아이유',
@@ -45,6 +43,11 @@ strListOrBooleanList = [
 
 // 같은 배열에 다른 타입의 값을 넣어주고 싶을때는 []앞에 유니언타입으로 지정해준다
 type StrOrNumberList = (string | number)[];
+/**
+ * 중괄호를 해서 유니언 타입으로 지정 
+ * 유니언이 어디에 들어가 있는지가 중요.. 그래야 독립된 리스트인지
+ * 하나의 리스트에서 에서 세부적으로 타입을 지정하고 싶은지을 알 수 있다
+ */
 let stringOrNumberList = [
   1, 2, 3,
   '아이유'
@@ -63,8 +66,6 @@ interface Human {
   age: number,
   address: string,
 }
-
-type AnimalOrHuman = Animal | Human;
 
 let animalOrHuman: AnimalOrHuman = {
   name: '신민주',
@@ -98,7 +99,8 @@ type Cat = {
 type PersonOrCat = Person | Cat;
 
 /**
- * 무조건 한 타입은 충족되고나서 초과되는 값은 괜찮지만, 
+ * 무조건!!!!!!!! 한 타입은 충족!!!!! 되어야한다!!
+ * 한 타입이 충족 되고나서 초과되는 값은 괜찮지만, 
  * 어떤 타입도 충족되지 않으면 에러가 난다
  */
 const personOrCat1: PersonOrCat = {

@@ -1,7 +1,5 @@
 /**
- * Casing
- * TS 에서 Casing 을 하면 JS 에서는 적용이 안된다
- * 
+ * Casing 캐스팅 - TS 에서 Casing 을 하면 JS 에서는 적용이 안된다
  */
 
 let codefactory = 'code factory';

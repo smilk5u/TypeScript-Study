@@ -1,7 +1,6 @@
 /**
- * Type Inference
- * 
- * 타입 추론
+ * Type Inference - 타입 추론 
+ * 타입스크립트에서 타입을 지정하지 않아도 자체적으로 타입을 유추할 수 있는 것.
  */
 let stringType = 'string';
 let booleanType = true;
@@ -10,8 +9,7 @@ let numberType = 20;
 booleanType = false;
 booleanType = true;
 
-// 아래 상수는 무조건 const string 값만 오게됨
-const constStringType = 'const string';
+const constStringType = 'const string'; // 상수 const 로 지정한 값은 변경이 안되기 때문에 해당 값은 const string 값만 오게된다. 구체화된 타입이다.
 const constBooleanType = true;
 
 let yuJin = {
@@ -24,11 +22,11 @@ const yuJin2 = {
   age: 2003
 }
 yuJin2.name = '코딩팩토리';
-console.log(yuJin2);
+
 
 /**
- * 캐스팅 - 특정타입으로 지정을 한다 프로퍼티를 구체화한다, 뒤에 as const 이런식으로 붙임
- * 객체안에서 구체화된 값을 지정할 수 있다
+ * 캐스팅 - 특정타입으로 지정을 한다 프로퍼티를 구체화한다, value 값 뒤에 (as const), as string 이런식으로 붙임
+ * as const 를 붙이게 되면 구체화된 값을 지정할 수 있다.
  */
 const yuJin3 = {
   name: '안유진' as const, // 스트링도 무조건 안유진 만 지정 (캐스팅해준다)
@@ -38,8 +36,8 @@ const yuJin3 = {
 // yuJin3.name = '안유진'; // 값 변경 된다
 // yuJin3.name = '코딩팩토리'; // 값 변경 안됨
 
-console.log(yuJin3.name) // 마우스를 대면 구체화 값을 알 수 있음
-console.log(yuJin2.name) // 구체화 된 값을 알 수 없음
+// console.log(yuJin3.name) // 마우스를 대면 구체화 값을 알 수 있음
+// console.log(yuJin2.name) // 구체화 된 값을 알 수 없음
 
 /**
  * Array
