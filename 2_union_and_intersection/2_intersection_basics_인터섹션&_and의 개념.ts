@@ -26,7 +26,5 @@ let humanAndContacts: HumanAndContacts = {
 
 type NumberAndString = number & string;
 
-console.log('fdf')
-
-// 프리미티브 타입에 인터섹션은 성립 할 수 없고 never 가 뜬다
+// 프리미티브 타입에 인터섹션은 성립 할 수 없고 never가 뜬다
 // let numberAndString: NumberAndString = undefined; // never 가 뜬다 

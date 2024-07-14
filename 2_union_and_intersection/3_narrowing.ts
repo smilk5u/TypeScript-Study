@@ -35,156 +35,156 @@ numbOrString.toString();
 numbOrString = Math.random() > 0.5 ? 1123 : '아이유';
 
 if (typeof numbOrString === 'string') {
-    numbOrString;
+  numbOrString;
 } else {
-    numbOrString;
+  numbOrString;
 }
 
 // (3) Truthiness Narrowing
 let nullOrString: null | string[] = Math.random() > 0.5 ? null : ['아이유', '레드벨벳'];
 
 if (nullOrString) {
-    nullOrString;
+  nullOrString;
 } else {
-    nullOrString;
+  nullOrString;
 }
 
 // (4) Equality Narrowing
 let numbOrString2: number | string = Math.random() > 0.5 ?
-    1123 : '아이유';
+  1123 : '아이유';
 let stringOrBool2: string | boolean = Math.random() > 0.5 ?
-    '아이브' : true;
+  '아이브' : true;
 
 if (numbOrString2 === stringOrBool2) {
-    numbOrString2;
-    stringOrBool2;
+  numbOrString2;
+  stringOrBool2;
 } else {
-    numbOrString2;
-    stringOrBool2;
+  numbOrString2;
+  stringOrBool2;
 }
 
 let numberOrStringOrNull: number | string | null = Math.random() > 0.5 ?
-    1123 : Math.random() > 0.5 ? '안유진' : null;
+  1123 : Math.random() > 0.5 ? '안유진' : null;
 
 if (typeof numberOrStringOrNull === 'number') {
-    numberOrStringOrNull;
+  numberOrStringOrNull;
 } else {
-    numberOrStringOrNull;
+  numberOrStringOrNull;
 }
 
 // (5) in operator narrowing
 interface Human {
-    name: string;
-    age: number;
+  name: string;
+  age: number;
 }
 
 interface Dog {
-    name: string;
-    type: string;
+  name: string;
+  type: string;
 }
 
 let human: Human = {
-    name: '안유진',
-    age: 23,
+  name: '안유진',
+  age: 23,
 }
 
 let dog: Dog = {
-    name: '오리',
-    type: 'Yorkshire Terrier',
+  name: '오리',
+  type: 'Yorkshire Terrier',
 }
 
 let humanOrDog: Human | Dog = Math.random() > 0.5 ?
-    human : dog;
+  human : dog;
 
 if ('type' in humanOrDog) {
-    humanOrDog;
+  humanOrDog;
 } else {
-    humanOrDog;
+  humanOrDog;
 }
 
 // (6) instanceof narrowing
 let dateOrString: Date | string = Math.random() > 0.5 ?
-    new Date() : '코드팩토리';
+  new Date() : '코드팩토리';
 
 if (dateOrString instanceof Date) {
-    dateOrString;
+  dateOrString;
 } else {
-    dateOrString;
+  dateOrString;
 }
 
 // (7) Discriminated Union Narrowing
 interface Animal {
-    type: 'dog' | 'human';
-    height?: number;
-    // 강아지의 종
-    breed?: string;
+  type: 'dog' | 'human';
+  height?: number;
+  // 강아지의 종
+  breed?: string;
 }
 
 let animal: Animal = Math.random() > 0.5 ?
-    {
-        type: 'human',
-        height: 177,
-    } : {
-        type: 'dog',
-        breed: 'Yorkshire Terrier',
-    };
+  {
+    type: 'human',
+    height: 177,
+  } : {
+    type: 'dog',
+    breed: 'Yorkshire Terrier',
+  };
 
 if (animal.type === 'human') {
-    animal.height;
+  animal.height;
 } else {
-    animal.breed;
-    animal.height;
+  animal.breed;
+  animal.height;
 }
 
 interface Human2 {
-    type: 'human';
-    height: number;
+  type: 'human';
+  height: number;
 }
 
 interface Dog2 {
-    type: 'dog',
-    breed: string;
+  type: 'dog',
+  breed: string;
 }
 
-interface Fish2{
-    type: 'fish';
-    length: number;
+interface Fish2 {
+  type: 'fish';
+  length: number;
 }
 
 type HumanOrDog2 = Human2 | Dog2 | Fish2;
 
 let humanOrDog2: HumanOrDog2 = Math.random() > 0.5 ?
-    {
-        type: 'human',
-        height: 177,
-    } : Math.random() > 0.5 ? {
-        type: 'dog',
-        breed: 'Yorkshire Terrier',
-    } : {
-        type: 'fish',
-        length: 12,
-    };
+  {
+    type: 'human',
+    height: 177,
+  } : Math.random() > 0.5 ? {
+    type: 'dog',
+    breed: 'Yorkshire Terrier',
+  } : {
+    type: 'fish',
+    length: 12,
+  };
 
-if(humanOrDog2.type === 'human'){
-    humanOrDog2;
-}else{
-    humanOrDog2;
+if (humanOrDog2.type === 'human') {
+  humanOrDog2;
+} else {
+  humanOrDog2;
 }
 
 // (8) Exhuastiveness Checking 
-switch(humanOrDog2.type){
-    case 'human':
-        humanOrDog2;
-        break;
-    case 'dog':
-        humanOrDog2;
-        break;
-    case 'fish':
-        humanOrDog2;
-        break;
-    default:
-        humanOrDog2;
+switch (humanOrDog2.type) {
+  case 'human':
+    humanOrDog2;
+    break;
+  case 'dog':
+    humanOrDog2;
+    break;
+  case 'fish':
+    humanOrDog2;
+    break;
+  default:
+    humanOrDog2;
 
-        const _check : never = humanOrDog2; // 위에서 값을 추가해줬을 경우를 대비해서 never 타입 외에는 에러가 날 수 있도록 더블체크를 해준다.
-        break;
+    const _check: never = humanOrDog2; // 위에서 값을 추가해줬을 경우를 대비해서 never 타입 외에는 에러가 날 수 있도록 더블체크를 해준다.
+    break;
 }

@@ -1,19 +1,20 @@
 /**
- * Tuple
+ * Tuple - JS 에서는 존재하지 않는 타입 
+ * 리스트안에서 여러개의 타입을 넣는 타입..
  */
 let iveTopMembers: string[] = ['안유진', '장원영', '레이'];
 
 let numberAndStringTuple: [number, string] = [
-    23,
-    '코드팩토리',
+  23,
+  '코드팩토리',
 ]
 
 numberAndStringTuple.push('아이유');
 console.log(numberAndStringTuple);
 
 let unmodifiableTuple: readonly [number, string] = [
-    23,
-    '코드팩토리',
+  23,
+  '코드팩토리',
 ]
 
 // unmodifiableTuple.push();
@@ -27,16 +28,16 @@ let actressesTuple = ['김고은', '박소담', '전여빈'] as const;
 const actressesTupleConst = ['김고은', '박소담', '전여빈'] as const;
 
 let stringArray: string[] = [
-    ...actressesTuple,
-    ...actressesTupleConst,
+  ...actressesTuple,
+  ...actressesTupleConst,
 ]
 
 /**
  * Named Tuple
  */
 const namedTuple: [name: string, age: number] = [
-    '코드팩토리',
-    32,
+  '코드팩토리',
+  32,
 ]
 
 /**
@@ -56,8 +57,8 @@ let tuple5: [number, number] = tuple2;
  * Tuple과 Array의 관계
  */
 let ive: [string, string] = [
-    '장원영',
-    '안유진',
+  '장원영',
+  '안유진',
 ]
 
 let stringArr: string[] = ive;
@@ -67,8 +68,8 @@ let stringArr: string[] = ive;
 /**
  * Multi Dimesional Tuple
  */
-const tuple2D : [string, number][] = [
-    ['코드팩토리', 32],
-    ['아이유', 31],
-    ['김고은', 30],
+const tuple2D: [string, number][] = [
+  ['코드팩토리', 32],
+  ['아이유', 31],
+  ['김고은', 30],
 ]

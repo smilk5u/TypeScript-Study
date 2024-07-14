@@ -2,7 +2,7 @@
  * Type Predicate 어떠한 값이 어떤 타입인지만 판별하기 위해서 만들어지는 함수.
  * - 함수 뒤에 input is number 이런식으로 작성한다.
  */
-function isNumber(input: any): input is number { // 
+function isNumber(input: any): input is number { 
   return typeof input === 'number';
 }
 
