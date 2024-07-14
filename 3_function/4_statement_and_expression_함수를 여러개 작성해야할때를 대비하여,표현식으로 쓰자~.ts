@@ -13,7 +13,7 @@ const addTwoNumbersExp = (x: number, y: number) => {
 }
 
 /**
-* Statement
+* statement (문장)
 */
 function add(x: number, y: number) : number{
   return x + y;
@@ -32,7 +32,7 @@ function divide(x: number, y: number) : number{
 }
 
 /**
-* Expression 
+* expression (표현식) 
 */
 type CalculationType = (x: number, y: number) => number;
 
