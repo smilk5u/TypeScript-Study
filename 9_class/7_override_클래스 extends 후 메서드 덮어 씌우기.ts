@@ -15,7 +15,7 @@ class WrongChild extends Parent {
   // shout() {
 
   // }
-}``
+}
 
 
 /**
@@ -23,7 +23,7 @@ class WrongChild extends Parent {
  */
 class Child extends Parent {
   // 1) 부모 메서드와 반환 타입이 일치해야한다.
-  // 2) 부모 메서드에 필수인 파라미터들이 존재해야한다. 
+  // 2) 부모 메서드에 필수인 파라미터들이 존재해야한다.
   // 3) 부모 메서드에서 optional인 파라미터들이 자식에서
   //    필수로 지정되면 안된다.
   shout(name: string, me?: string): string { // me 는 자식에서는 없기 때문에 옵셔널로 체크해준다.
