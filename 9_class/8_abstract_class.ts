@@ -13,7 +13,7 @@ abstract class ModelWithId {
 
 class Product extends ModelWithId{
 
-}
+}   
 
 const product = new Product(1);
 product.id;

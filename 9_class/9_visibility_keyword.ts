@@ -12,7 +12,7 @@ class PropertyTestParent{
     #jsPrivateProperty = 'js private property';
 
     test(){
-        this.publicProperty;
+        this.publicProperty;   
         this.protectedProperty;
         this.privateProperty;
         this.#jsPrivateProperty
