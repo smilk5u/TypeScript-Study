@@ -31,7 +31,7 @@ class Child extends Parent {
       return super.shout(name);
     } else {
       return super.shout(name) + ` 내 이름은 ${me}야!`;
-    }
+    } 
   }
 }
 
