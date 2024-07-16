@@ -1,5 +1,5 @@
 /**
- * Class 선언하기
+ * Class 선언하기 - Class 내 프로퍼티 선언시 type 를 꼭 입력해줘야한다.
  */
 class SampleClass { }
 
