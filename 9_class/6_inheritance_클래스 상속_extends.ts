@@ -35,6 +35,8 @@ codefactory.dance();
 ahri.dance();
 ahri.sing();
 
+
+
 let person: Parent; // 최로 부모 타입으로 선언했기 때문에, 부모와 자식 인스턴스를 할당 할 수 있다.
 person = codefactory; // 부모타입을 넣을 수 있다.
 person = ahri; // 자식타입도 넣을 수 있다. 
@@ -45,6 +47,8 @@ person2 = ahri;
 
 /**
  * optional 프로퍼티를 유의하자
+ * 타입스크립트에서만 되는 게 있는데 구조가 비슷하면 같은 타입이라고 본다.
+ * 
  */
 class Parent2 {
   name: string;
@@ -68,8 +72,12 @@ class Child2 extends Parent2 {
   }
 }
 
-const cf2 = new Parent2('코드팩토리');
-const ahri2 = new Child2('아리', 20);
+/**
+ * 타입스크립트에서 타입 추론해서 Class 로 설정됨
+ * 
+ */
+const cf2 = new Parent2('코드팩토리'); 
+const ahri2 = new Child2('아리', 20); 
 
 let child: Child2; // 변수에 자식 타입 선언
 child = ahri2; // 자식은 당연히 가능
