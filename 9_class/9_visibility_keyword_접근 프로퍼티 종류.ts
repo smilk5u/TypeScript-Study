@@ -9,8 +9,9 @@ class PropertyTestParent {
   public publicProperty = 'public property';
   protected protectedProperty = 'protected property';
   private privateProperty = 'private property';
-  #jsPrivateProperty = 'js private property';
+  #jsPrivateProperty = 'js private property'; // 이건 JS 에서 사용하는 프라이빗 형태
 
+  // Class 내부에서 사용하는 것은 모두 가능하다.
   test() {
     this.publicProperty;
     this.protectedProperty;
@@ -21,14 +22,14 @@ class PropertyTestParent {
 
 class PropertyTestChild extends PropertyTestParent {
   test() {
-    this.publicProperty;
-    this.protectedProperty;
-    // this.privateProperty;
-    // this.#jsPrivateProperty
+    this.publicProperty; // 기본값이라서 당연히 접근 가능
+    this.protectedProperty; // 자식 클래스에서 접근 가능
+    // this.privateProperty; // 접근 안됨
+    // this.#jsPrivateProperty // 접근 안됨
   }
 }
 
 const instance = new PropertyTestChild();
 
-instance.publicProperty;
+instance.publicProperty; // 기본값만 접근 가능
 // instance.
