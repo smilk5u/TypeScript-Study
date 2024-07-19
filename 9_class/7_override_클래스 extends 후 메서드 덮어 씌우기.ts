@@ -13,7 +13,6 @@ class WrongChild extends Parent {
   // 3) 부모 메서드에서 optional인 파라미터들이 자식에서
   //    필수로 지정되면 안된다.
   // shout() {
-
   // }
 }
 
@@ -31,7 +30,7 @@ class Child extends Parent {
       return super.shout(name);
     } else {
       return super.shout(name) + ` 내 이름은 ${me}야!`;
-    } 
+    }
   }
 }
 
