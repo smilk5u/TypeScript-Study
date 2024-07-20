@@ -95,7 +95,7 @@ class MaleIdol extends Idol2 {
  * 제네릭의 삼항연산자
  * 만약에 T가 MaleIdol 를 익스텐즈 한다면 MaleIdol를 반환하고, 아니면 FemaleIdol를 반환해라.
  */
-type SpecificIdol<T extends Idol2> = T extends MaleIdol ? 
+type SpecificIdol<T extends Idol2> = T extends MaleIdol ?
   MaleIdol : FemaleIdol;
 
 const idol2: SpecificIdol<MaleIdol> = new MaleIdol();
