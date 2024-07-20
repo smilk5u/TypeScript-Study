@@ -4,8 +4,8 @@
  */
 
 /**
- * 클래스에 타입을 지정해준다. 
- * class 에 implements 시켜준다면 내부에 적인 값을 모두 입력해줘야한다.
+ * implements란? - 클래스에 타입을 지정해준다. 
+ * class 에 implements 시켜준다면 implements한 타입 내부에 적힌 값을 모두 입력해 줘야 한다.
  */
 interface Animal { 
   name: string;
