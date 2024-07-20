@@ -6,30 +6,30 @@ type GenericSimpleType<T> = T;
 const genericString: GenericSimpleType<string> = '코드팩토리';
 // const genericString2: GenericSimpleType = '코드팩토리';
 
-interface DoneState<T>{
-    data: T[];
+interface DoneState<T> {
+  data: T[];
 }
 
-interface LoadingState{
-    requestedAt: Date;
+interface LoadingState {
+  requestedAt: Date;
 }
 
 interface ErrorState {
-    error: string;
+  error: string;
 }
 
 type State<T = number> = DoneState<T> | LoadingState | ErrorState;
 
 let state: State<string> = {
-    data: ['123', '456'],
+  data: ['123', '456'],
 }
 
 state = {
-    requestedAt: new Date()
+  requestedAt: new Date()
 }
 
-state = {error: 'error'};
+state = { error: 'error' };
 
 let state2: State = {
-    data: [123, 456]
+  data: [123, 456]
 }
