@@ -1,5 +1,5 @@
 /**
- * Partial Type
+ * Partial Type - test
  */
 interface Idol {
   name: string;
