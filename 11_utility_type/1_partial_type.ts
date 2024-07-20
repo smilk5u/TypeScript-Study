@@ -1,5 +1,5 @@
 /**
- * Partial Type - test
+ * Partial Type - test 브랜치 테스트 중입니다.!~!!
  */
 interface Idol {
   name: string;
