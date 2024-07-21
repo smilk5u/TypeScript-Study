@@ -1,5 +1,6 @@
 /**
  * Class에서 Generic 사용하기
+ * 클래스에서 제너릭 사용하는 방법
  */
 class Pagination<Data, Message> {
   data: Data[] = [];
@@ -24,7 +25,7 @@ class Pagination2<Data, Message> {
   }
 }
 
-const pagination2 = new Pagination2<number, string>([123, 456]);
+const pagination2 = new Pagination2<number, string>([123, 456]); // 명시적으로 다가 제너릭 타입을 입력을 해야 값을 불러올 때 어떤 타입을 가져와야 하는지 알 수 있다.
 
 pagination2.data;
 pagination2.message;
