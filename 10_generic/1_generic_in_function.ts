@@ -2,7 +2,6 @@
  * Generic 함수에서 사용하기
  * <> 코멘트를 사용하여 타입을 변수화 하는 방법
  * 미리 타입을 지정하지 않고, T라는 변수를 정의해놓고 타입을 사용할 때 타입을 지정해 줄 수 있다
- * test test test
  */
 
 function whatValue(value: any) {
