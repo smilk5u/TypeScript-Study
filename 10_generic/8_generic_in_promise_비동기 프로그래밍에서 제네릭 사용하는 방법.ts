@@ -1,5 +1,5 @@
 /**
- * Generic in Promise - 비동기 프로그래밍에서 제네릭 사용하는 방법
+ * Generic in Promise - 비동기 프로그래밍에서 제너릭 사용하는 방법
  */
 const afterTwoSeconds = function () {
   return new Promise((resolve) => {
