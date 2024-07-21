@@ -43,7 +43,7 @@ const yuJin = new Idol({
   // age: 23,
 });
 
-const yuJin2 = new Idol({ // Idol class 에서 BaseGeneric class 를 제네릭으로 익스텐즈 했기 때문에 name: string 을 무조건 입력해 줘야 한다.
+const yuJin2 = new Idol({ // Idol class 에서 BaseGeneric class 를 제너릭으로 익스텐즈 했기 때문에 name: string 을 무조건 입력해 줘야 한다.
   name: '안유진',
 });
 
@@ -92,7 +92,7 @@ class MaleIdol extends Idol2 {
 }
 
 /**
- * 제네릭의 삼항연산자
+ * 제너릭의 삼항연산자
  * 만약에 T가 MaleIdol 를 익스텐즈 한다면 MaleIdol를 반환하고, 아니면 FemaleIdol를 반환해라.
  */
 type SpecificIdol<T extends Idol2> = T extends MaleIdol ?

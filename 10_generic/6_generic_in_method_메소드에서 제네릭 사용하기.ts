@@ -18,7 +18,7 @@ class Idol<T> {
 
 const yuJin = new Idol('a999', '안유진');
 
-// 제네릭으로 타입을 지정해줬기 때문에 어떤값을 넣어주더라도 해당 값으로 타입이 설정된 다.
+// 제너릭으로 타입을 지정해줬기 때문에 어떤값을 넣어주더라도 해당 값으로 타입이 설정된 다.
 console.log(yuJin.sayHello('2023')); //  string 타입
 console.log(yuJin.sayHello(1992)); // number 타입
 
