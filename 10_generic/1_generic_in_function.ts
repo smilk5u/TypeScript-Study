@@ -15,7 +15,7 @@ function genericWhatValue<T>(value: T): T { // 일반적으로 type의 T 를 많
   // return { name: value }; 
 }
 
-const genericResult1 = genericWhatValue<number>(123);
+const genericResult1 = genericWhatV<number>(123);
 /**
  * const로 선언하고 제너럴 값을 입력하지 않았기에 
  * 타입스크립트에서 타입을 자동적으로 유추하여 '123'로 타입으로 설정된다.
