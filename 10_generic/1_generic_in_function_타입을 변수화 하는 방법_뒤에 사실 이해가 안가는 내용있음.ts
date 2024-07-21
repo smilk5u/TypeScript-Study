@@ -43,7 +43,7 @@ const multipleGenericResult2 = multipleGenerics( // 타입유추를 한 것 같�
 );
 
 function getTuple<X, Y, Z>(val1: X, val2: Y, val3: Z) {
-  return [val1, val2, val3] as const;
+  return [val1, val2, val3] as const; // 제너릭을 사용하여 튜플만드는 방법
 }
 
 function getTuple1<X, Y>(val1: X, val2: Y) {
@@ -57,7 +57,7 @@ console.log(tuple);
 console.log(tuple2);
 
 /**
- * 인터페이스에서 컨스럭터 타입을 받을 수 있게하는 방법을 제너럴 방식으로 변환
+ * 인터페이스에서 컨스럭터 타입을 받을 수 있게하는 방법을 제너럴 방식으로 변환 * 
  */
 class Idol {
   name: string;
@@ -79,6 +79,7 @@ class Car {
   }
 }
 
+// 실제에서는 잘 사용하지 않는 방법이다.
 function instantiator<T extends { new(...args: any[]): {} }>(constructor: T,
   ...args: any[]) {
   return new constructor(...args);
