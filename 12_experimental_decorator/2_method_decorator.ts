@@ -6,7 +6,7 @@ class Idol {
 
   constructor(name: string) {
     this.name = name;
-  }
+  } 
 
   @TestMethodDecorator
   @Configurable(false)
