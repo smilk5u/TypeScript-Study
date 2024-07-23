@@ -31,7 +31,7 @@ function Frozen(constructor: Function) {
   Object.freeze(constructor.prototype);
 }
 
-const yuJin = new Idol('안유진', 23);
+const yuJin = new Idol('안유진', 23); 
 
 console.log(Object.isFrozen(Object.getPrototypeOf(yuJin)));
 
