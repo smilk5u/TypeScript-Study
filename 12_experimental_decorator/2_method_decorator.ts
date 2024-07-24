@@ -17,8 +17,7 @@ class Idol {
 }
 
 // target - static method에 데코레이팅을 할 경우 생성자 함수
-//        - instance method에 데코레이팅 할경우 인스턴스의 prototype
-// propertyKey - 메서드의 이름
+// propertyKey - 메서드의 이름, 네이밍
 // descript - property descriptor
 function TestMethodDecorator(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
   console.log('LogCall');
