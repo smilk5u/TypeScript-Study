@@ -22,8 +22,12 @@ class Idol {
   }
 }
 
+/**
+ * # 데코레이터 사용 방법 
+ *    1. 함수를 만든다.
+ */
 function Test(constructor: Function) { // class 상위에 @내용의 파라미터를 받을 수가 있다.
-  console.log(constructor);
+  console.log(constructor); // 이 consturtor 를 데코레이터로 받아올 수가 있다(?)
 }
 
 function Frozen(constructor: Function) {
@@ -31,7 +35,7 @@ function Frozen(constructor: Function) {
   Object.freeze(constructor.prototype);
 }
 
-const yuJin = new Idol('안유진', 23); 
+const yuJin = new Idol('안유진', 23);
 
 console.log(Object.isFrozen(Object.getPrototypeOf(yuJin)));
 
