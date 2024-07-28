@@ -11,7 +11,7 @@
 @Test
 @Frozen
 @LogTest('PROD')
-@ChangeClass
+// @ChangeClass
 class Idol {
   name: string;
   age: number;
@@ -22,30 +22,35 @@ class Idol {
   }
 }
 
+/**
+ * # 데코레이터 사용 방법 
+ *    1. 함수를 만든다.
+ */
 function Test(constructor: Function) { // class 상위에 @내용의 파라미터를 받을 수가 있다.
-  console.log(constructor);
+  console.log(constructor); // 이 consturtor 를 데코레이터로 받아올 수가 있다(?)
 }
 
+/**
+ * 해당 데코레이터를 어디에 사용할 수 있을까?
+ */
 function Frozen(constructor: Function) {
-  Object.freeze(constructor);
-  Object.freeze(constructor.prototype);
+  Object.freeze(constructor); // 얼리기
+  Object.freeze(constructor.prototype); // 얼리기
 }
 
-const yuJin = new Idol('안유진', 23); 
+const yuJin = new Idol('안유진', 23); // 얼려있음.
 
-console.log(Object.isFrozen(Object.getPrototypeOf(yuJin)));
+console.log(Object.isFrozen(Object.getPrototypeOf(yuJin))); // class 상단에 데코레이터를 입력해주면 true / 아니면 false가 반환된다.
 
-// decorator factory
+// decorator factory - 데코레이팅 함수가 실행 될 때 파라미터 값을 넘겨주고 싶을 때
 function LogTest(env: string) {
   return function (constructor: Function) {
     console.log(`[${env}] ${constructor}가 실행됐습니다.`);
   }
 }
 
-console.log('-----------------------');
-
 const wonYoung = new Idol('장원영', 22);
-console.log(wonYoung);
+// console.log(wonYoung);
 
 function ChangeClass<T extends { new(...args: any[]): {} }>(constructor: T) {
   return class extends constructor {
@@ -54,7 +59,7 @@ function ChangeClass<T extends { new(...args: any[]): {} }>(constructor: T) {
     constructor(...params: any[]) {
       super(...params);
 
-      console.log('constructor instantiated');
+      // console.log('constructor instantiated');
     }
   }
 }
