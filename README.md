@@ -94,11 +94,11 @@
 - return_type, 함수의 return 리턴타입을 가져오는 방법
 - template_literal, 대소문자 변경
 
-### 12. Experimental_decorator
+### 12. Experimental Decorator
 
 - ..study
 
-### 13. Reflection3_multiple_ways_to_import_and_export__export 한 모든 값들을 객체처럼 가져오는 방법
+### 13. Reflection
 
 - ..study
 
