@@ -1,4 +1,4 @@
-# TypeScript Study
+2_import_2_export default가 아닌 export 한 파일을 가져오려면 import에 {} 괄호 형식을 사용해야 한다# TypeScript Study
 
 - TypeScript를 효과적으로 사용하는 방법
 
@@ -70,27 +70,48 @@
 
 ### 10. Generic
 
-- ..study
+- <> 코멘트를 사용하여 타입을 변수화 하는 방법 (타입을 변수화 하는 방법)
+- interface 에서 제네릭을 사용하는 방법
+- Type 에서 제네릭을 사용하는 방법
+- class 에서 제네릭을 사용하는 방법
+- 제네릭의 삼항연산자, 제네릭의 keyof 사용방법
+- 메소드에서 제네릭 사용방법
+- class 에 타입을 지정, implements 사용방법
+- 비동기 프로그래밍에서 제너릭 사용하는 방법
 
 ### 11. Utility Type
 
-- ..study
+- 타입 전부 X, 부분만 사용 시 쓰이는 타입
+- 전부 다 필 수로 만들고 싶은 타입
+- Readonly Type, const 와 같은 말, 값을 불러오는 것은 되지만 변경과 추가는 불가능하다
+- Pick Type, 타입내부에서 원하는 값만 픽해서 가져 올 수 있는 방법
+- Omit Type, 내가 제외하고 싶은 타입 가져올 수 있는 방법
+- Exclude Type, 객체타입이 아닌 유니온 타입으로 설정하는 방법
+- extract_type, 타입에서 추가하고 싶은 값만 설정하는 방법
+- non_nullable_type,  null, undefined 타입은 제외시켜주는 타입
+- parameter_type, 함수의 파라미터 타입을 가져오는 방법
+- constructor_parameter, 클래스 컨스트럭터의 타입을 가져오는 방법
+- return_type, 함수의 return 리턴타입을 가져오는 방법
+- template_literal, 대소문자 변경
 
 ### 12. Experimental_decorator
 
 - ..study
 
-### 13. Reflection
+### 13. Reflection3_multiple_ways_to_import_and_export__export 한 모든 값들을 객체처럼 가져오는 방법
 
 - ..study
 
 ### 14. Namespace
 
-- ..study
+- 현재 타입스크립트에서는 빠진 기능
 
 ### 15. Import And Export
-
-- ..study
+- 현재 파일에서 작성한 것을 외부파일로 사용하는 방법
+- import_default 한 것을 해당 문서에 import 시키는 파일
+- 실질적인 업무에서는 export default 보다는 export
+- export default가 아닌 export 한 파일을 가져오려면 import에 {} 괄호 형식을 사용
+- 모든 값들을 객체처럼 가져오는 방법
 
 ### 16. Extras
 
