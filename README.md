@@ -1,4 +1,4 @@
-2_import_2_export default가 아닌 export 한 파일을 가져오려면 import에 {} 괄호 형식을 사용해야 한다# TypeScript Study
+# TypeScript Study
 
 - TypeScript를 효과적으로 사용하는 방법
 
